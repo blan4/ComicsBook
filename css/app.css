@@ -5,6 +5,7 @@
 
 body {
   background-color: #363636;
+  margin-top: 0px;
 }
 
 #container {
@@ -17,24 +18,28 @@ body {
 header {
   height: 180px;
 }
-
-ul.nav, li {
-  display: inline;
+nav{
+  display: inline-block;
+}
+nav li {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 25px;
 }
 
 .title {
   text-transform: uppercase;
-  font-family: 'Bangers Regular';
   font-size: 73.26px;
   color: #ffed92;
+  margin-bottom: 30px;
 }
 
 a.nav-font {
+  color: #bdafac;
+  text-transform: uppercase;
   font-family: 'Oswald';
   font-weight: 700;
-  text-transform: uppercase;
   font-size: 48.55px;
-  color: #bdafac;
 }
 
 a.nav-font:hover {
@@ -69,14 +74,56 @@ a {
 }
 
 .about {
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
   color: #e4deda;
   font-size: 36px;
   font-family: 'Oswald';
   font-weight: 400;
 }
+
+section {
+  text-align: center;
+}
+
+.about-text {
+  width: 545px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+p.line {
+  margin: 0;
+}
+
 .catchword {
   font-size: 45px;
+}
+
+a.logo  {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.superwords {
+  font-size: 48px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.superheroes {
+  margin-top: 60px;
+}
+
+.superhero {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.superheroes .superhero {
+  display: inline-block;
+}
+
+h1,h2,h3 {
+  font-family: 'Bangers Regular';
+  text-transform: uppercase;
+  color: #ffed92;
 }
