@@ -127,3 +127,39 @@ h1,h2,h3 {
   text-transform: uppercase;
   color: #ffed92;
 }
+
+p {
+  color: #e4d4d1;
+  font-family: 'Oswald';
+  font-size: 36px;
+  font-weight: 400;
+}
+
+p.comment {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+p.client-name {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+p.country {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+p.form-description {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+p.address {
+  font-size: 24px;
+}
+
+input, textarea {
+  background-color: #191516; 
+  border: 2px solid #e4d4d1;
+}
