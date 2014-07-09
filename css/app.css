@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Bangers Regular';
+  src: url('/fonts/Bangers.ttf');
+}
+
+body {
+  background-color: #363636;
+}
+
+#container {
+  background-color: #191516;
+  width: 1017px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+  height: 180px;
+}
+
+ul.nav, li {
+  display: inline;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Bangers Regular';
+  font-size: 73.26px;
+  color: #ffed92;
+}
+
+a.nav-font {
+  font-family: 'Oswald';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48.55px;
+  color: #bdafac;
+}
+
+a.nav-font:hover {
+  color: #fdf3f3;
+}
+
+a.nav-font.active {
+  color: #fdf3f3;  
+}
+
+footer a {
+  font-family: 'Oswald';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48.32px;
+  color: #f1e7e7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  list-style: none;
+}
+
+.copyright {
+  background-color: #736e49;
+  font-size: 36.1px;
+  font-family: 'Oswald';
+  font-weight: 400;
+}
+
+.about {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #e4deda;
+  font-size: 36px;
+  font-family: 'Oswald';
+  font-weight: 400;
+}
+.catchword {
+  font-size: 45px;
+}
