@@ -190,3 +190,34 @@ p.client-country {
   margin-top: -10px;
   margin-bottom: 0;
 }
+
+.form {
+  display: block;
+  margin-left: 80px;
+}
+.form-text {
+  display: block;
+  padding: 0;
+  height: 70px;
+  width: 430px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-area {
+  display: block;
+  padding: 0;
+  height: 260px;
+  width: 430px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-button {
+  font-family: 'Oswald';
+  font-weight: 700;
+  font-size: 49px;
+  color: #f1e7e7;
+  text-transform: uppercase;
+  float: left;
+}
