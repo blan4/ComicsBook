@@ -213,11 +213,17 @@ p.client-country {
   margin-bottom: 20px;
 }
 
-.form-button {
+button.form-button {
   font-family: 'Oswald';
   font-weight: 700;
   font-size: 49px;
   color: #f1e7e7;
   text-transform: uppercase;
   float: left;
+  border: 0;
+  background: #191516;
+}
+
+button.form-button:hover {
+  color: #bdafac;
 }
