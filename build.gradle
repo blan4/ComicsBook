@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("junit:junit")
 }
 
@@ -25,6 +27,10 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE")
     }
+}
+
+configurations {
+    providedRuntime
 }
 
 task wrapper(type: Wrapper) {
