@@ -19,6 +19,7 @@ public class Order {
     }
 
     public Order(String email, String name, String message) {
+        this.id = UUID.randomUUID();
         this.email = email;
         this.name = name;
         this.message = message;

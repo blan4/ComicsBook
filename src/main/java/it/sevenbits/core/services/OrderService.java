@@ -3,8 +3,6 @@ package it.sevenbits.core.services;
 import it.sevenbits.core.domain.Order;
 import it.sevenbits.core.respository.OrdersRepository;
 
-import java.util.UUID;
-
 /**
  * Created by Ilya on 17.07.2014.
  */
@@ -16,9 +14,6 @@ public class OrderService {
     }
 
     public Order createOrder(Order order) {
-        if (order.getId() == null) {
-            order.setId(UUID.randomUUID());
-        }
         return repository.save(order);
     }
 }

@@ -14,6 +14,9 @@ public class OrdersInMemoryRepository implements OrdersRepository {
         this.orders = Collections.unmodifiableMap(orders);
     }
 
+    public OrdersInMemoryRepository(){
+    }
+
     @Override
     public Order save(final Order order) {
         Map<UUID, Order> modifiedOrders = new HashMap<UUID, Order>(orders);

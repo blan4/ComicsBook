@@ -23,8 +23,9 @@ $(function(){
     $.ajax({
       type: 'POST',
       url: '/orders',
-      data: formData,
+      data: JSON.stringify(formData),
       dataType: 'json',
+      contentType: 'application/json',
       success: function(res) {
         console.log(res);
         if (res) {
@@ -32,7 +33,9 @@ $(function(){
                 for (var i in res.message) {
                     if (res.message.hasOwnProperty(i)) {
                         console.log(i, res.message[i]);
-                        $form[i].addClass(errorClass);
+                        if ($form[i]) {
+                            $form[i].addClass(errorClass);
+                        }
                         $error_box.append(["<p>", i, res.message[i], "</p>"].join(" "));
                     }
                 }
