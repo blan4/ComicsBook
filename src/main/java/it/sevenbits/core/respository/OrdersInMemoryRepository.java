@@ -15,11 +15,15 @@ public class OrdersInMemoryRepository implements OrdersRepository {
     }
 
     public OrdersInMemoryRepository(){
+        this.orders = new HashMap<UUID, Order>();
     }
 
     @Override
     public Order save(final Order order) {
         Map<UUID, Order> modifiedOrders = new HashMap<UUID, Order>(orders);
+        if (order.getId() == null) {
+            order.setId(UUID.randomUUID());
+        }
         modifiedOrders.put(order.getId(), order);
         this.orders = Collections.unmodifiableMap(modifiedOrders);
 
