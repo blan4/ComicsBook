@@ -147,6 +147,10 @@ p.address {
 input, textarea {
   background-color: #191516; 
   border: 2px solid #e4d4d1;
+  color: #b0a3a1;
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 36px;
 }
 
 .advantage {
