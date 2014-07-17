@@ -6,7 +6,9 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body>
     <div id="container">
@@ -105,10 +107,10 @@
       <section>
         <h1 class="title">Get in touch!</h1>
         <div>
-          <form class="form">
-            <input class="form-text" placeholder="Your name" type="text"/>
-            <input class="form-text" placeholder="Your email" type="text"/>
-            <textarea class="form-area" placeholder="Your message"></textarea>
+          <form id="form" class="form">
+            <input name="name" class="form-text" placeholder="Your name" type="text"/>
+            <input name="email" class="form-text" placeholder="Your email" type="text"/>
+            <textarea name="message" class="form-area" placeholder="Your message"></textarea>
             <button class="form-button">Send</button>
           </form>
         </div>
@@ -120,6 +122,7 @@
           <p class="address">T:(345) 234-6666</p>
           <p class="address">T:(345) 233-6656</p>
         </div>
+        <div id="error-box"></div>
       </section>
 
       <footer>
