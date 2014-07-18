@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.Valid;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * Created by Ilya on 15.07.2014.
@@ -39,5 +39,16 @@ public class OrdersController {
 
         orderService.createOrder(order.toDomain());
         return new JsonResponse(false, null);
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public @ResponseBody List<Order> index(){
+        Map<UUID, it.sevenbits.core.domain.Order> coreOrders = orderService.findAll();
+        List<Order> orders = new ArrayList<Order>(coreOrders.size());
+        for (it.sevenbits.core.domain.Order coreOrder : coreOrders.values()) {
+            orders.add(new Order(coreOrder));
+        }
+
+        return orders;
     }
 }

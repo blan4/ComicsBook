@@ -153,6 +153,10 @@ input, textarea {
   font-size: 36px;
 }
 
+input.error, textarea.error {
+    border: 2px solid #ed1c24;
+}
+
 .advantage {
   text-align: left;
   margin-left: 60px;

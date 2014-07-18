@@ -32,7 +32,7 @@ public class OrdersInMemoryRepository implements OrdersRepository {
 
     @Override
     public Order find(UUID id) {
-        return null;
+        return orders.get(id);
     }
 
     @Override
