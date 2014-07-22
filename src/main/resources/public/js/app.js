@@ -36,15 +36,15 @@ $(function(){
                         if ($form[i]) {
                             $form[i].addClass(errorClass);
                         }
-                        $error_box.append(["<p>", i, res.message[i], "</p>"].join(" "));
+                        $error_box.append(["<li class='error'>", i, res.message[i], "</li>"].join(" "));
                     }
                 }
             } else {
-                console.log("<p>Form saved</p>");
+                console.log("<li class='success'>Form saved</li>");
             }
         } else {
             console.log("Something went wrong");
-            $error_box.html("<p>Server error</p>");
+            $error_box.html("<li class='error'>Server error</li>");
         }
       }
     });

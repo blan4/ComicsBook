@@ -235,3 +235,18 @@ button.form-button {
 button.form-button:hover {
   color: #bdafac;
 }
+
+li.error {
+  color: #e4d4d1;
+  font-family: 'Oswald';
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.form-block .block {
+    display: inline-block;
+}
+
+#error-box {
+    list-style-image: url('../img/point.png');
+}
