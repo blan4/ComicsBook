@@ -1,24 +1,76 @@
-.gradle
-build/
+######################
+# Intellij
+######################
+.idea/**
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
 
-# Ignore Gradle GUI config
-gradle-app.setting
-*.class
+######################
+# Maven
+######################
+/log/**
+/target/**
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+######################
+# Gradle
+######################
+.gradle/**
 
-# Package Files #
+######################
+# Package Files
+######################
 *.jar
 *.war
 *.ear
+*.db
 
-# virtual machine crash logs, see
-http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-.idea
-*.iml
-*.ipr
-*.iws
-out/
-.idea_modules/
+######################
+# Windows
+######################
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+######################
+# Mac OSX
+######################
+.DS_Store
+.svn
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+######################
+# Directories
+######################
+/build/**
+/bin/**
+/spring_loaded/**
+/deploy/**
+
+######################
+# Logs
+######################
+*.log
+
+######################
+# Others
+######################
+*.class
+*.*~
+*~
+.merge_file*
+
+######################
+# Gradle Wrapper
+######################
+!gradle/wrapper/gradle-wrapper.jar
