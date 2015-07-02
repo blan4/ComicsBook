@@ -3,7 +3,7 @@ jdk:
 - oraclejdk8
 deploy:
   provider: heroku
-  app: ComicsBook
+  app: comics-book
   api_key:
     secure: gFjxHY67N3R84zfvKMiEt5b6Ja1CPpBGnuYr5pOV9GXTAkNc9daDHAPIAAhHTaLlaiaQrjPBD3swwQBjSUJ7uykewDd45agDDP4iV7/iL4Kz9ybklCpkosAm6t3561FYpmTbKw0hYAw0KDr0/Om7uqwiHLbnZ/YJU6et5s04a2c=
 notifications:
