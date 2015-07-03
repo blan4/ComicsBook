@@ -2,11 +2,12 @@ package it.sevenbits.core.respository;
 
 import it.sevenbits.core.domain.Order;
 
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public interface OrdersRepository {
+public interface OrderRepository {
     Order save(final Order order);
-    Order find(UUID id);
-    Map<UUID, Order> findAll();
+    Order find(final Integer id);
+    List<Order> findAll();
 }

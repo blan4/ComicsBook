@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.Valid;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/orders")
@@ -40,11 +41,9 @@ public class OrdersController {
 
     @RequestMapping(method = RequestMethod.GET)
     public @ResponseBody List<Order> index(){
-        Map<UUID, it.sevenbits.core.domain.Order> coreOrders = orderService.findAll();
+        List<it.sevenbits.core.domain.Order> coreOrders = orderService.findAll();
         List<Order> orders = new ArrayList<Order>(coreOrders.size());
-        for (it.sevenbits.core.domain.Order coreOrder : coreOrders.values()) {
-            orders.add(new Order(coreOrder));
-        }
+        orders.addAll(coreOrders.stream().map(Order::new).collect(Collectors.toList()));
 
         return orders;
     }

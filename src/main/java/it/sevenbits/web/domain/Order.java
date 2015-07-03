@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 import java.util.UUID;
 
 public class Order {
-    private final UUID id;
+    private final Integer id;
 
     @NotBlank(message = "can't be blank")
     @Size(min=2, message = "can't be less then 2 or more then 30 symbols")
@@ -25,14 +25,8 @@ public class Order {
     @Size(max=1000, message = "must be less then 1000 symbols")
     private final String message;
 
-    public Order(String name, String email, String message) {
-        this.id = UUID.randomUUID();
-        this.name = name;
-        this.email = email;
-        this.message = message;
-    }
     public Order(){
-        this.id = UUID.randomUUID();
+        this.id = null;
         this.name = null;
         this.email = null;
         this.message = null;
@@ -58,10 +52,10 @@ public class Order {
     }
 
     public it.sevenbits.core.domain.Order toDomain() {
-        return new it.sevenbits.core.domain.Order(email, name, message);
+        return new it.sevenbits.core.domain.Order(id, email, name, message);
     }
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 }

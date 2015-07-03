@@ -1,32 +1,37 @@
 package it.sevenbits.core.domain;
 
-import java.util.UUID;
-
 public class Order {
-    private UUID id;
+    private Integer id;
     private String email;
     private String name;
     private String message;
 
-    public Order(UUID id, String email, String name, String message) {
+    public Order(Integer id, String email, String name, String message) {
         this.id = id;
         this.email = email;
         this.name = name;
         this.message = message;
     }
 
-    public Order(String email, String name, String message) {
-        this.id = UUID.randomUUID();
-        this.email = email;
-        this.name = name;
-        this.message = message;
+    public Order() {
+        this.id = null;
+        this.email = null;
+        this.name = null;
+        this.message = null;
     }
 
-    public UUID getId() {
+    @Override
+    public String toString() {
+        return String.format(
+                "Order[id=%d, email='%s', name='%s', message='%s']",
+                id, email, name, message);
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

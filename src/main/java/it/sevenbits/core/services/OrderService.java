@@ -1,23 +1,24 @@
 package it.sevenbits.core.services;
 
 import it.sevenbits.core.domain.Order;
-import it.sevenbits.core.respository.OrdersRepository;
+import it.sevenbits.core.respository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
-import java.util.Map;
-import java.util.UUID;
+import java.util.List;
 
+@Service
 public class OrderService {
-    private final OrdersRepository repository;
-
-    public OrderService(final OrdersRepository repository) {
-        this.repository = repository;
-    }
+    @Autowired
+    @Qualifier(value = "orderPersistRepository")
+    private OrderRepository repository;
 
     public Order createOrder(Order order) {
         return repository.save(order);
     }
 
-    public Map<UUID, Order> findAll() {
+    public List<Order> findAll() {
         return repository.findAll();
     }
 }
