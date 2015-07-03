@@ -4,9 +4,6 @@ import it.sevenbits.core.domain.Order;
 
 import java.util.*;
 
-/**
- * Created by Ilya on 17.07.2014.
- */
 public class OrdersInMemoryRepository implements OrdersRepository {
     private Map<UUID, Order> orders;
 

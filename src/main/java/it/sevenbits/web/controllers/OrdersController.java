@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.validation.Valid;
 import java.util.*;
 
-/**
- * Created by Ilya on 15.07.2014.
- */
 @Controller
 @RequestMapping("/orders")
 public class OrdersController {

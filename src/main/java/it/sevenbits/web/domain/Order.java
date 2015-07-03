@@ -6,9 +6,6 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.UUID;
 
-/**
- * Created by Ilya on 15.07.2014.
- */
 public class Order {
     private final UUID id;
 

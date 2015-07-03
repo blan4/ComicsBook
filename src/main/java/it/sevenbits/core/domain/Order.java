@@ -2,9 +2,6 @@ package it.sevenbits.core.domain;
 
 import java.util.UUID;
 
-/**
- * Created by Ilya on 17.07.2014.
- */
 public class Order {
     private UUID id;
     private String email;

@@ -6,9 +6,6 @@ import it.sevenbits.core.respository.OrdersRepository;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * Created by Ilya on 17.07.2014.
- */
 public class OrderService {
     private final OrdersRepository repository;
 
