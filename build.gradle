@@ -16,8 +16,14 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
 
 jar {
+    baseName = 'comics-book'
+    version = '0.0.1-SNAPSHOT'
+}
+
+war {
     baseName = 'comics-book'
     version = '0.0.1-SNAPSHOT'
 }
@@ -42,6 +48,8 @@ dependencies {
     runtime("org.postgresql:postgresql:9.4-1201-jdbc41")
 
     testCompile("junit:junit")
+
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 configurations {
